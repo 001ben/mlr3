@@ -32,7 +32,7 @@ MeasureClassifF1 = R6Class("MeasureClassifF1",
     },
 
     score_internal = function(prediction, ...) {
-      Metrics::f1(actual = prediction$truth, predicted = prediction$response)
+      Metrics::fbeta_score(actual = prediction$truth, predicted = prediction$response)
     }
   )
 )
